@@ -1,0 +1,67 @@
+{% extends "index.html" %}
+
+{% block title %}
+Online Quiz System | View
+{% endblock %}
+
+{% block body %}
+<div class="page-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Basic Form Inputs card start -->
+            <div class="card">
+                <div class="card-header">    
+                    <h5>Question Bank</h5>
+                </div>
+                <div class="card-block">
+                    <h4 class="sub-title">Add Question</h4>
+                    <form action="/savequestion" method="POST">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Question:</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="question" required="required" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Option A:</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="optionA" required="required" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Option B:</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="optionB" required="required" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Option C:</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="optionC" required="required" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Option D:</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="optionD" required="required" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Correct Answer:</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="answer" required="required" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row m-t-30">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Add Question</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Basic Form Inputs card end -->
+        </div>
+    </div>
+</div>
+{% endblock %}

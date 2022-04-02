@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+
+{% block title %}
+Online Quiz System | View Results
+{% endblock %}
+
+{% block body %}
+<!-- Inverse table card start -->
+<div class="card">
+    <div class="card-header">
+        <div class="card-header-right">
+            <ul class="list-unstyled card-option">
+                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                <li><i class="fa fa-window-maximize full-card"></i></li>
+                <li><i class="fa fa-minus minimize-card"></i></li>
+                <li><i class="fa fa-refresh reload-card"></i></li>
+                <li><i class="fa fa-trash close-card"></i></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-block table-border-style">
+        <div class="table-responsive">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Student Name</th>
+                        <th>Marks Obtained</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in student_records %}
+                            <tr>
+                                <th scope="row">{{loop.index}}</th>
+                                <td>{{student.username}}</td>
+                                <td>{{student.name}}</td>
+                                <td>{{student.marks}}</td>
+                            </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Inverse table card end -->
+{% endblock %}
